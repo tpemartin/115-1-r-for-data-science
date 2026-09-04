@@ -1,0 +1,168 @@
+[
+  [
+    "Timestamp",
+    "Name",
+    "School Id",
+    "Title",
+    "Video link",
+    "Summary",
+    "Github final project link",
+    "Honor code declaration"
+  ],
+  [
+    "2026-06-08T12:47:06.428Z",
+    "(052) 張妍",
+    "411473052",
+    "2017年-2023年高雄觀光景點遊客人數統計報告",
+    "https://youtu.be/rH1WXBxKV34?si=xfGCw3YJWJJwPdMm",
+    "這份作業透過高雄觀光景點旅遊人數報告﹐利用大數據透視高雄觀光在 2017 至 2023 年間的軸線翻轉。數據顯示，受疫情與政策影響，傳統宗教團客景點（像是:佛光山）人次大幅萎縮；反之，受惠於亞洲新灣區建設、大型 IP 行銷與 2023 年爆發的演唱會經濟學，駁二、愛河灣與義大世界強勢崛起。高雄已成功打破過路客魔咒，轉型為高留宿率的都會水岸文創娛樂之都。",
+    "https://drive.google.com/drive/folders/1eCdoLPORzraj61-Y3h8oh-PAqgoMIDSy?usp=sharing",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-13T12:34:43.316Z",
+    "(061) 陳怡文",
+    "411473061",
+    "台灣信用卡消費特徵與年齡層消費習慣",
+    "https://youtu.be/POIMmq2qKik?si=hyO1BWbNhbGH7rp2",
+    "主題為各年齡在十六縣消費，主要研究雙北的消費習慣和年齡間的差異，抱歉教授我的背景音有點吵",
+    "https://drive.google.com/drive/folders/1qYa7Dd60d-WxpmCCiWHIAC9K3DpjanNN",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-13T13:35:58.016Z",
+    "(041) 葉大豪",
+    "411473041",
+    "新竹市十年所得分析",
+    "https://youtu.be/JkbMsbBngD8?si=6zicnW8JLUS2EHR0",
+    "這是有關新竹市十年的各種方面的分析",
+    "https://drive.google.com/drive/folders/1oJzYE1X_yUt6bc3ooZr78XGiwvBQEDCS?usp=sharing",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-13T21:46:34.706Z",
+    "(018) 古聖維",
+    "411473018",
+    "Monetary Conditions and Taiwan Stock Market: An Exploratory Analysis of Taiwan Financial Indicators, 1994–2025",
+    "https://youtu.be/68ENo0Iw5p0?si=uVxKYeb-ZMnIgeWl",
+    "This project explores the relationship between monetary conditions and Taiwan’s stock market performance from 1994 to 2025. Using a Taiwan financial and economic indicators dataset, I analyzed variables such as the central bank discount rate, M1B and M2 money supply growth rates, exchange rate, gold price, foreign exchange reserves, TAIEX, and market turnover. I used Google Colab with R to clean the data, create log-transformed variables, add a 2008–2009 financial crisis dummy, and produce several visualizations, including standardized time-series charts, a scatter plot, a crisis-year TAIEX chart, and a correlation heatmap. The results suggest possible relationships between interest rates, money supply, crisis periods, and stock market movements. However, this project is exploratory, so the findings should be interpreted as correlations rather than causal effects. AI was used to help design the research topic, organize the analysis, generate R code, and improve the project narrative.",
+    "https://drive.google.com/drive/folders/1oMSKbXSrP-EymMKLz6KP6zXkNWMo5dDT?usp=sharing",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-14T02:02:43.609Z",
+    "(110) 藍子絜",
+    "411473110",
+    "大眾捷運系統開發環境影響評估審查進度資料分析",
+    "https://youtu.be/MRmS92FrbAw?si=CbeMev2W5aNUYgIA",
+    "本資料集收錄大眾捷運系統開發案件之環境影響評估審查資訊，涵蓋案件基本資料、開發規模、主管機關及審查結果等內容。資料反映我國軌道運輸建設於不同時期之發展情形，並記錄各項重大建設計畫之環評審查歷程。\n\n本研究透過資料盤點、完整性檢查及異常值分析，建立資料基線資訊，作為後續探討捷運建設發展趨勢、區域分布特徵及環評審查效率之基礎。研究成果可提供交通建設規劃、環境治理及公共政策分析之參考依據。",
+    "https://drive.google.com/drive/folders/1RvNTj1pPbRrSaZAVe3UvWgoHkHH-rtOx",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-14T05:02:55.206Z",
+    "(055) 鍾昕恩",
+    "411373055",
+    "哪所大學最不擁擠",
+    "https://youtu.be/hXcAVqhK7pI?si=J359o44pW7HXvVGH",
+    "利用各個學校校地面積,學生人數,找出最不擁擠的學校",
+    "https://drive.google.com/drive/folders/190B2JSPbGpF_OtbG3JK6yPX01ZX1-rYi",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-14T06:39:02.612Z",
+    "(021) 李孟倢",
+    "411283021",
+    "臺中市失業率-依教育程度別區分",
+    "https://youtu.be/Fl1zomJgs1g",
+    "這份臺中市失業率數據集與敘事分析實作指南，是一份將民國100至111年結構化勞動力統計轉化為深度社會經濟洞察的檔案，它不僅詳盡規範了資料庫物理特徵與防禦性品質控制邊界，更透過高教擴張帶來的青年尋職摩擦、半導體供應鏈修正下的高階人才異常警訊、精密機械聚落造就的技職專科就業神話、以及高學歷市場中的性別不對稱曲線等四個核心故事，將冰冷的失業率百分比重構為具備人文關懷的勞動市場變遷史，並在嚴格遵循狀態機協作與資訊溯源標籤的架構下。",
+    "https://drive.google.com/drive/folders/1SvZE7JLQ0FFBhLe_I7T8fmgiD4QyiIhb?usp=sharing",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-14T08:37:39.526Z",
+    "(002) 丁一權",
+    "411473002",
+    "113年哪個年齡區段收入最高",
+    "https://youtu.be/yHn38l1891M",
+    "做了一個關於113年哪個年齡區間收入最高，並問他原因。",
+    "https://drive.google.com/drive/folders/17Wlowlwc-udsqyEg1PsnatlPbrsJWSbT?usp=sharing",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-14T09:03:27.081Z",
+    "(051) 黃楷捷",
+    "411473051",
+    "台灣各縣市15歲以上教育程度",
+    "https://youtu.be/srjJDAFUGRA?si=7LO8UQuFg4X5f55G",
+    "透過視覺化與 arrange() 排序，我們從 112 年的台灣人口結構中挖掘出兩個極具歷史與社會意義的重大趨勢：\n\n高等教育的普及與翻轉（大學學歷）：\n從 65 歲以上高齡世代（大學比例不滿 15%）一路走向 20-29 歲的年輕世代，大學普及率狂飆上升近八成，深刻記錄了台灣高等教育擴張的歷史。其中，在 20-59 歲 的龐大區間中，女性擁有大學學歷的人數與比例均全面超越男性。\n\n高階學術職場的性別結構（研究院/碩博士學歷）：\n到了碩博士階段，趨勢發生了顯著逆轉。無論在哪個年齡層，男性的碩博士人數與比例皆遠大於女性。全台灣碩博士學歷人口密度最高的「黃金年齡層」，前兩名分別為 35-39 歲男性（約 17.85%） 與 40-44 歲男性（約 15.91%），呈現出高階學歷在性別分布上的不同生態。",
+    "https://drive.google.com/drive/folders/1c12R-40FglpBVHamUZwnzWm6MENFHiMs?usp=sharing",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-14T12:55:12.684Z",
+    "(014) 謝承學",
+    "411373014",
+    "桃園市各行政區出生人口結構變遷與區域極化效應研究",
+    "https://youtu.be/qYH3id1Fues",
+    "這是關於與ai討論的桃園市各行政區出生人口結構變遷與區域極化效應研究，內容討論到了桃園市跨年度的生育率的變化以及原因，並在最後提出可能可以實施的政策方向\n",
+    "https://drive.google.com/drive/folders/1gNxBfOOEsQwRtr0HHqAMrtkoQbfpd0By?usp=sharing",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-14T13:45:51.938Z",
+    "(035) 陳宣妤",
+    "411473035",
+    "供應全球僑校教材數量與各地區中文、僑校數量的關係",
+    "https://youtu.be/THaIILIHnj0?si=T4QIDUyYqjA9WpWx",
+    "全球僑校資源分配呈現「總量領先」與「密度領先」並行的特徵，亞洲憑藉龐大校數穩居需求之冠，而大洋洲與非洲則擁有最高的單校獲配密度,。數據顯示美洲地區正處於校數縮減但資源集中的整合階段，而歐洲則是唯一受贈國家與教材量持續雙重萎縮的區域",
+    "https://docs.google.com/document/d/1wBkVsBQyVLhAtTqRr3ggbtMMXJ-khQrsoiVuSaRCxdo/edit?usp=share_link",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-14T14:11:26.834Z",
+    "(015) 謝昀臻",
+    "411473015",
+    "台灣信用卡消費與職業別交易計",
+    "https://youtu.be/1qPvlaxsnhg",
+    "這份報告大綱以 2014 至 2026 年臺灣信用卡數據為基礎 ，探討「工商及服務類」與「公教群體」在刷卡購買力與消費品味上的階層差異 ，並深入剖析信用排除、隱私屏蔽及疫情政策對數據造成的統計偏誤 。",
+    "https://drive.google.com/drive/folders/1IOX5C2e58e7pwnhxEW1um9829n73bsZT?usp=sharing",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-14T15:24:19.070Z",
+    "(098) 謝宏駿",
+    "411473098",
+    "捷運與輕軌的關係",
+    "https://youtu.be/am8qrvjyX64",
+    "詢問AI高雄捷運和輕軌的關係",
+    "https://drive.google.com/drive/folders/1LHuCw9unnzU52oYhjjSsExTm_Li2lY15?usp=sharing",
+    [
+      "I agree."
+    ]
+  ]
+]

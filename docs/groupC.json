@@ -1,0 +1,180 @@
+[
+  [
+    "Timestamp",
+    "Name",
+    "School Id",
+    "Title",
+    "Video link",
+    "Summary",
+    "Github final project link",
+    "Honor code declaration"
+  ],
+  [
+    "2026-06-09T04:44:04.096Z",
+    "(023) 侯舒懷",
+    "411472023",
+    "AI 行車安全診斷與事前預防政策管理機制",
+    "https://youtu.be/8_ZCNhM1OHA",
+    "本研究旨在探討 AI 技術導入交通安全管理體系之有效性。透過整合 OpenPose 與 YOLO 視覺辨識技術，將非結構化之行車影像轉換為結構化風險指標。研究建立一套從 AI 偵測、風險分級到行政介入的閉環管理架構，驗證了透過精確的風險分級與客製化行政處置，能有效縮短風險反應時間，推動交通管理從「事後事故檢討」轉型為「事前風險預防」。",
+    "https://drive.google.com/drive/folders/11DY0ryevfsR1NCh9SMheriqO7ArK_2sd?usp=sharing",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-10T09:43:23.960Z",
+    "(131) 楊琪琪",
+    "411473131",
+    "供應全球僑校教材冊數統計表",
+    "https://youtu.be/WbJMM0exMMs",
+    "本报告基于全球侨校教材供应数据，分析各地区教材册数的分布差异与规模特点。",
+    "https://drive.google.com/drive/folders/1R2KslNxpw8y10CDHkQyg73JSZhaOBE1Q?usp=sharing",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-11T08:31:54.589Z",
+    "(074) 吳蔓妡",
+    "411473074",
+    "台灣觀光遊憩據點遊客人次分析",
+    "https://youtu.be/Qpk6Xif6GW0?si=qqUOKAz6euQ-dtKW",
+    "本專題使用交通部觀光署公布之「115年3月主要觀光遊憩據點遊客人次統計」資料集，透過 NotebookLM 與 ChatGPT 協助進行資料探索與分析。研究內容包含熱門觀光景點排行、各縣市觀光發展情況、宗教景點吸引力以及資料中的特殊現象。分析結果顯示，都市商圈型景點具有極高吸引力，而宗教文化景點也持續維持高度人氣。本專題展示了 AI 工具在資料整理、分析與資料故事建構上的應用價值。",
+    "https://docs.google.com/document/d/19jVol4SrNl-sfiH55nSka3WU116cKdrs4ufDaI3q5Ag/edit?usp=drive_link",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-12T02:49:10.136Z",
+    "(079) 呂睿誠",
+    "411473079",
+    "新北市之經濟結構與貧富差距探討",
+    "https://youtu.be/I90tOANhtjg",
+    "以教授上課內容為啟發和參考，分析2021年綜合所得稅申報狀況，再與2022年做比較，分析其中後疫情時代的經濟體變動。教授提供的資料僅用於對照，是其更直觀分析總體經濟環境",
+    "https://drive.google.com/drive/folders/126zE6zJLqYI7WpD0E5jam4fw7HB0_vgF?usp=sharing",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-13T07:16:00.080Z",
+    "(006) 賴昶元",
+    "411373006",
+    "How Market Fear Changes Cross-Asset Behavior: A VIX Regime Analysis",
+    "https://youtu.be/vch5kVkNslM",
+    "This final project analyzes how stocks, government bonds, gold, and commodities behave under different levels of market fear.\n\nThe market environment is classified using the VIX index:\n\nLow fear: VIX below 20\nMedium fear: VIX from 20 to 30\nHigh fear: VIX above 30\n\nThe project uses 18 daily financial datasets and focuses on nine major assets, including SPX, QQQ, SOXX, VTV, SHY, IEF, TLT, GLD, and DBC. The common analysis period is from February 6, 2006 to June 9, 2026, with 5,117 trading days.\n\nThe analysis compares daily returns, annualized volatility, positive-return frequency, and cross-asset correlations across different VIX regimes.\n\nThe main findings show that high-VIX periods are associated with significantly higher volatility and stronger correlations among equity assets. Long-term government bonds and gold may provide diversification benefits, although these effects are not guaranteed in every market period.\n\nChatGPT was used as an AI assistant for topic design, data organization, Python programming, data-quality checking, result interpretation, and documentation. All datasets, code, charts, and supplementary materials are included in the Google Drive project folder.",
+    "https://drive.google.com/drive/folders/1vHg021ZH6DffnCrHPRUKC89guyZquVrJ?usp=drive_link",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-13T11:19:06.596Z",
+    "(069) 歐駿希",
+    "411473069",
+    "臺北市扶養比及老化指數",
+    "https://youtu.be/LIPbi8HUtRQ",
+    "這些文件提供關於臺北市自 1968 年至 2025 年間人口結構演變的全面分析，涵蓋原始數據、程式虛擬碼及研究報告。資料詳盡記錄了老化指數與扶養比的變遷，特別指出 2015 年老年人口超越幼年人口的「黃金交叉」點，隨後老化速度呈現指數級成長。研究核心在於揭示扶養負擔的質性轉變，說明現代青壯年已從過去的「投資未來」轉向負擔沉重的「承擔過去」。此外，內容也包含資料預處理的技術規格與政策模擬邏輯，藉此評估生育激勵方案對緩解社會高齡化壓力的潛在影響。最後，作者針對戶籍與常住人口的偏差提出精準福利投放建議，旨在建立更具韌性的都市生態。",
+    "https://drive.google.com/drive/u/1/folders/1HRXAHstUUGt88vFca1MIIsaqs-wxaZ4l",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-13T21:07:41.909Z",
+    "(032) 黃筠雅",
+    "411473032",
+    "勞工對育嬰留職停薪政策的支持程度",
+    "https://youtu.be/w45xDxL0NZo?si=VV8i8qwXs2D4l3V8",
+    "本專案使用勞動部109年育嬰留職停薪相關調查資料，探討不同背景勞工對該政策的支持程度。透過R進行資料整理與視覺化，並結合ChatGPT及NotebookLM協助資料探索。分析結果顯示，多數勞工皆認為育嬰留職停薪政策有助於保有工作及穩定就業，其中年輕族群支持度較高，而教育程度較低的族群支持度相對較低。整體而言，該政策獲得多數勞工正面評價。",
+    "https://drive.google.com/drive/folders/19yZGRvhY2teCbhy4JRU8fyKUMlHQP5Uo",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-14T00:39:43.123Z",
+    "(051) 李昀達",
+    "411373051",
+    "台灣產業單極化分析",
+    "https://youtu.be/TUkXGOnNFkY",
+    "本研究探討台灣產業結構過度集中的現況。實證一顯示，自2012年起製造業佔 GDP 比重逆勢飆升，呈現顯著的單極化擴張。實證二透過多元線性迴歸模型，在嚴格控制服務業等變數下對製造業進行單一變數 T 檢定，結果顯示 P 值極度顯著，鐵證台灣 GDP 成長高度綁定單一產業。本報告據此提出荷蘭病與系統性韌性不足之政策反思。",
+    "https://drive.google.com/drive/folders/1j6S5Ixj4Rmvend9t6ToZfbuEYF4Brqxb?usp=sharing",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-14T07:34:02.937Z",
+    "(113) 陳琬蓁",
+    "411473113",
+    "2017-2024南投人口遷入數",
+    "https://youtu.be/uxp1amla_9Y",
+    "這份作業主題為南投人口每年的遷入人數，結合Gemini與notebookLM進行分析，在數據中發現，南投縣2017-2024年的遷入人數，女性往往大於男性，主要是受婚姻還有照顧經濟及就業市場的影響，再來也發現2021年的人口遷入數為2017-2024年的最低，而2023年為最高，兩者皆是受疫情發展還有解封的影響。",
+    "https://drive.google.com/drive/folders/1M0WfsewaCxSIi6-oYTNdlZfKXhdBqxAY?usp=drive_link",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-14T08:28:34.260Z",
+    "(053) 曹睿恩",
+    "411473053",
+    "富裕卻不快樂？從數據看「東亞幸福悖論」",
+    "https://youtu.be/Pzb8ErO1LGQ?si=DfTei-UFFQg0BrYP",
+    "• 研究背景與動機\n本研究利用《世界幸福報告》（World Happiness Report）之公開資料，聚焦分析東亞地區（台灣、日本、韓國、中國、香港）的數據表現。探討為何東亞國家在總體經濟與公共衛生上取得巨大成功，人民的主觀幸福感卻未能同步提升，陷入經濟發展與快樂脫鉤的「東亞幸福悖論」。\n• 資料探索與三大指標洞察\n透過與 AI（NotebookLM）的協作，本專案交叉分析了「幸福指數（Ladder Score）」、「人均 GDP（Logged GDP per capita）」與「健康預期壽命（Healthy life expectancy）」三大核心變數，發現了顯著的數據反差：\n1. 硬實力的頂峰（富裕與長壽）： 數據顯示，東亞已開發經濟體（如台、日、韓、港）不論在「人均 GDP」或「健康預期壽命」的分數上，皆處於全球極具競爭力的領先梯隊。\n2. 主觀幸福感的落差： 儘管擁有「活得長、物質富裕」的雙重優勢，東亞各國的「幸福指數」在散佈圖中卻集體落在全球趨勢線的下方。這證實了金錢與健康的邊際效應在達到一定門檻後已開始遞減。\n• 結論與故事啟示\n這段數據故事揭示了「長壽且富裕，並不等於快樂」的社會現實。東亞社會集體面臨的隱形生活壓力、競爭與體制高壓，成為卡住幸福感上升的隱形天花板。未來的發展重心，應從盲目追求 GDP 數字與生理壽命，轉向心靈健康、社會支持以及生活品質的實質提升。",
+    "https://drive.google.com/drive/folders/12-QXGe-rHMj6it18hy7BFfdQPtYNv2pQ",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-14T13:14:17.132Z",
+    "(083) 王彥臻",
+    "411473083",
+    "臺中市各行政區使用牌照稅實徵數變遷與趨勢分析（103~114年）",
+    "https://youtu.be/91IWmTzocXA",
+    "這份報告主要分析臺中市 103 到 114 年的牌照稅數據。發現了全台中的總稅收 12 年來成長了 17.77%，從 82 億爬升到 96.5 億元。其中「北屯區」表現最誇張，稅收狂飆 108%，直接突破 11.8 億元奪下全市第一，反映出重劃區和人口移入的爆發性成長；相反地，飽和的舊城「中區」增幅只有 7.5% 慘遭墊底。分析過程中，還抓出原始資料在 112 年漏掉了和平區的數據，並用統計趨勢做了估算補齊。最後運用趨勢折線圖和各區成長率長條圖，把原本枯燥的稅收數字串成一個清晰的區域發展故事。",
+    "https://drive.google.com/drive/folders/1Me7mmQgbpLZs2bRNSYGW379ldqfP-SqN?usp=drive_link",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-14T15:09:02.895Z",
+    "(033) 黃彥筠",
+    "411473033",
+    "全台大專院校所需負擔租金",
+    "https://youtu.be/cG1XsA40cEY",
+    "北部學生須付但相對重的租金",
+    "https://drive.google.com/drive/folders/12KBaBMvHNjMTagYBwi9FsN35mFJqivtG?usp=drive_link",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-14T15:59:01.847Z",
+    "(401) 陳忻駿",
+    "411474401",
+    "從台北市不動產交易情形看價格指數",
+    "https://youtu.be/dMBT9qPH4uE",
+    "本研究旨在建立多元線性迴歸模型，以臺北市法拍市場的『成交件數』與『每坪均價』作為市場極端壓力的代理變數，探討其對整體『住宅價格指數』的同步與預測能力。釐清法拍市場的『價量變動』究竟是常態房市的領先預警指標、落後反彈訊號，抑或是純粹的市場雜訊。",
+    "https://drive.google.com/drive/folders/1H7DacgTmZpeV2BWYlsn4rJVz4TO0zM0-?usp=sharing",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-14T16:00:29.596Z",
+    "(078) 袁靖喬",
+    "411473078",
+    "Taiwan Air Quality Index (AQI) Data Analysis ",
+    "https://youtu.be/0KEOK9fV06A",
+    "This project uses Taiwan government open data to analyze air quality (AQI, PM2.5, PM10). It helps users easily understand and compare air quality between cities. Using AI tools, the data is turned into simple explanations for better daily decision-making.",
+    "https://drive.google.com/drive/folders/10QmkEYdnCWICMFkcdMq_4AZ7wM8twu2g",
+    [
+      "I agree."
+    ]
+  ]
+]

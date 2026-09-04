@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隨機抽籤系統</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .slot-machine {
+            height: 120px;
+            overflow: hidden;
+            position: relative;
+            background: #f3f4f6;
+            border-radius: 1rem;
+            border: 4px solid #e5e7eb;
+        }
+
+        .slot-container {
+            transition: transform 0.1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+        }
+
+        .slot-item {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #4f46e5;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #f00;
+            animation: fall 3s linear forwards;
+            z-index: 50;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(100vh) rotate(360deg); }
+        }
+
+        .history-item {
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Loading animation for the fetch button */
+        .loading-spinner {
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #3498db;
+            border-radius: 50%;
+            width: 14px;
+            height: 14px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="max-w-4xl mx-auto">
+        <div class="glass-card p-6 md:p-10">
+            <h1 class="text-3xl font-bold text-center text-indigo-800 mb-8">🎯 隨機抽籤系統</h1>
+
+            <!-- 抽籤顯示區 -->
+            <div class="mb-10">
+                <div class="slot-machine mb-6">
+                    <div id="slotContainer" class="slot-container">
+                        <div class="slot-item">點擊下方按鈕開始</div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button id="drawBtn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg flex items-center gap-2">
+                        <span>🎲 抽取一位</span>
+                    </button>
+                    <div class="flex items-center gap-2 bg-gray-100 p-1 rounded-full border border-gray-300">
+                        <input type="number" id="multiCount" value="1" min="1" max="10" class="w-16 bg-transparent text-center font-bold focus:outline-none">
+                        <button id="drawMultiBtn" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-full transition-all">
+                            批量抽取
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 名單管理 -->
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-bold text-gray-700">📋 抽籤名單 (<span id="countDisplay">0</span>)</h2>
+                        <div class="flex gap-2">
+                            <button id="fetchBtn" class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded hover:bg-blue-200 flex items-center gap-1">
+                                <span id="fetchIcon">🔄</span> 同步雲端
+                            </button>
+                            <button id="resetBtn" class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded hover:bg-gray-200">重設</button>
+                        </div>
+                    </div>
+                    <textarea id="nameList" class="w-full h-48 p-4 border rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none text-gray-600 text-sm leading-relaxed" placeholder="正在載入名單..."></textarea>
+                </div>
+
+                <!-- 歷史紀錄 -->
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-bold text-gray-700">🏆 中獎紀錄</h2>
+                        <button id="clearHistoryBtn" class="text-sm text-gray-400 hover:underline">清除</button>
+                    </div>
+                    <div id="historyList" class="h-48 overflow-y-auto space-y-2 pr-2">
+                        <p class="text-gray-400 text-center py-10">尚無紀錄</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 提示框 -->
+    <div id="toast" class="fixed bottom-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-6 py-3 rounded-full shadow-2xl opacity-0 transition-opacity pointer-events-none z-50">
+        提示訊息
+    </div>
+
+    <script>
+        // 目標 JSON URL
+        const JSON_URL = "https://tpemartin.github.io/114-2-r-for-data-science/students_ee.json";
+        
+        // 備用名單 (以防 Fetch 失敗)
+        const fallbackList = "(024) 施輝燦, (025) 陳佩雯, (032) 李珮慈, (047) 郭安哲, (040) 高宗佑, (002) 余亞欣, (009) 李金翰, (010) 蔡承恩, (012) 陳玟卉, (022) 黃湙媞, (027) 江文靜, (030) 潘玥岑, (031) 陳麒丞, (013) 沈祐篁";
+
+        const nameListInput = document.getElementById('nameList');
+        const countDisplay = document.getElementById('countDisplay');
+        const slotContainer = document.getElementById('slotContainer');
+        const historyList = document.getElementById('historyList');
+        const drawBtn = document.getElementById('drawBtn');
+        const drawMultiBtn = document.getElementById('drawMultiBtn');
+        const multiCountInput = document.getElementById('multiCount');
+        const resetBtn = document.getElementById('resetBtn');
+        const fetchBtn = document.getElementById('fetchBtn');
+        const fetchIcon = document.getElementById('fetchIcon');
+        const clearHistoryBtn = document.getElementById('clearHistoryBtn');
+        const toast = document.getElementById('toast');
+
+        let isDrawing = false;
+
+        // 使用 fetch 取得資料
+        async function fetchStudentList() {
+            fetchIcon.innerHTML = '<span class="loading-spinner"></span>';
+            fetchBtn.disabled = true;
+            
+            try {
+                const response = await fetch(JSON_URL);
+                if (!response.ok) throw new Error('網路回應不正常');
+                
+                const data = await response.json();
+                // 假設 data 是一個字串陣列
+                if (Array.isArray(data)) {
+                    nameListInput.value = data.join(',\n');
+                    showToast("名單同步成功！");
+                } else {
+                    throw new Error('資料格式不正確');
+                }
+            } catch (error) {
+                console.error("Fetch error:", error);
+                nameListInput.value = fallbackList.split(', ').join(',\n');
+                showToast("同步失敗，已載入預設名單");
+            } finally {
+                fetchIcon.innerHTML = '🔄';
+                fetchBtn.disabled = false;
+                updateCount();
+            }
+        }
+
+        function parseNames(rawText) {
+            return rawText
+                .split(/[,\n]/)
+                .map(name => name.trim())
+                .filter(name => name.length > 0);
+        }
+
+        function updateCount() {
+            const names = parseNames(nameListInput.value);
+            countDisplay.innerText = names.length;
+        }
+
+        function showToast(msg) {
+            toast.innerText = msg;
+            toast.style.opacity = '1';
+            setTimeout(() => toast.style.opacity = '0', 2000);
+        }
+
+        function startDraw(count = 1) {
+            if (isDrawing) return;
+            const names = parseNames(nameListInput.value);
+            
+            if (names.length === 0) {
+                showToast("名單是空的！");
+                return;
+            }
+
+            isDrawing = true;
+            drawBtn.disabled = true;
+            drawMultiBtn.disabled = true;
+            
+            if (count === 1) {
+                runSingleAnimation(names);
+            } else {
+                runBatchDraw(names, Math.min(count, names.length));
+            }
+        }
+
+        function runSingleAnimation(names) {
+            const duration = 2000;
+            const startTime = Date.now();
+            
+            const timer = setInterval(() => {
+                const randomName = names[Math.floor(Math.random() * names.length)];
+                slotContainer.innerHTML = `<div class="slot-item">${randomName}</div>`;
+                
+                if (Date.now() - startTime >= duration) {
+                    clearInterval(timer);
+                    const finalWinner = names[Math.floor(Math.random() * names.length)];
+                    slotContainer.innerHTML = `<div class="slot-item text-indigo-600 scale-110">${finalWinner}</div>`;
+                    addHistory(finalWinner);
+                    createConfetti();
+                    finishDrawing();
+                }
+            }, 60);
+        }
+
+        function runBatchDraw(names, count) {
+            slotContainer.innerHTML = `<div class="slot-item text-xl">正在從 ${names.length} 人中抽取 ${count} 位...</div>`;
+            
+            setTimeout(() => {
+                const shuffled = [...names].sort(() => 0.5 - Math.random());
+                const selected = shuffled.slice(0, count);
+                
+                slotContainer.innerHTML = `<div class="slot-item text-lg text-purple-600 px-4 text-center">中獎者：${selected.join('、')}</div>`;
+                selected.forEach(w => addHistory(w));
+                createConfetti();
+                finishDrawing();
+            }, 1200);
+        }
+
+        function finishDrawing() {
+            isDrawing = false;
+            drawBtn.disabled = false;
+            drawMultiBtn.disabled = false;
+        }
+
+        function addHistory(name) {
+            const time = new Date().toLocaleTimeString('zh-TW', { hour12: false });
+            const div = document.createElement('div');
+            div.className = "history-item bg-white p-3 rounded-lg shadow-sm border-l-4 border-indigo-500 flex justify-between items-center text-sm";
+            div.innerHTML = `
+                <span class="font-medium text-gray-700">${name}</span>
+                <span class="text-gray-400 text-xs">${time}</span>
+            `;
+            
+            if (historyList.querySelector('p')) historyList.innerHTML = '';
+            historyList.prepend(div);
+        }
+
+        function createConfetti() {
+            for (let i = 0; i < 40; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.top = '-10px';
+                confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 70%, 60%)`;
+                confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                confetti.style.opacity = Math.random();
+                document.body.appendChild(confetti);
+                setTimeout(() => confetti.remove(), 4000);
+            }
+        }
+
+        // 初始化與事件監聽
+        nameListInput.addEventListener('input', updateCount);
+        drawBtn.addEventListener('click', () => startDraw(1));
+        drawMultiBtn.addEventListener('click', () => {
+            const count = parseInt(multiCountInput.value) || 1;
+            startDraw(count);
+        });
+
+        resetBtn.addEventListener('click', () => {
+            nameListInput.value = fallbackList.split(', ').join(',\n');
+            updateCount();
+            showToast("已載入預設名單");
+        });
+
+        fetchBtn.addEventListener('click', fetchStudentList);
+
+        clearHistoryBtn.addEventListener('click', () => {
+            historyList.innerHTML = '<p class="text-gray-400 text-center py-10">尚無紀錄</p>';
+        });
+
+        // 頁面載入時自動從網路獲取名單
+        window.onload = fetchStudentList;
+
+    </script>
+</body>
+</html>

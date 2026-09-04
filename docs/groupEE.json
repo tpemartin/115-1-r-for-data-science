@@ -1,0 +1,108 @@
+[
+  [
+    "Timestamp",
+    "Name",
+    "School Id",
+    "Title",
+    "Video link",
+    "Summary",
+    "Github final project link",
+    "Honor code declaration"
+  ],
+  [
+    "2026-06-07T11:37:27.563Z",
+    "(010) 蔡承恩",
+    "311451010",
+    "台北市車禍改善指南",
+    "https://youtu.be/Vk5QJrsgOLg",
+    "探討台北市車禍原因跟改善方法",
+    "https://drive.google.com/drive/folders/1RcBzJksVIknDoGPF08VKgP6ZAEy9EAhg?usp=sharing",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-11T14:45:04.553Z",
+    "(040) 高宗佑",
+    "311351040",
+    "titanic dateset資料分析",
+    "https://youtu.be/lvElCXQMJCo",
+    "# 專題摘要\n\n本專題以 Titanic（鐵達尼號）乘客資料集為研究對象，透過人工智慧（AI）協助進行資料探索與分析，探討影響乘客生還率的重要因素。資料集包含 500 筆乘客資料，內容涵蓋性別、年齡、艙等等基本資訊以及最終生還結果。\n\n研究過程中，首先利用 AI 協助檢查資料內容與欄位特性，再透過統計分析比較不同族群的生還情況。分析結果顯示，性別、艙等與年齡皆與生還率具有一定關聯。其中女性乘客的生還率明顯高於男性，而高艙等乘客的生還率也普遍高於低艙等乘客。此外，兒童乘客相較於成年人具有較高的生還機會。\n\n透過 AI 的協助，不僅能快速完成資料整理與探索，更能從大量資料中找出潛在規律，進一步建構完整的資料故事。本研究發現，鐵達尼號事件中的生存機率並非完全隨機，而是受到當時救援政策與社會階級等因素影響。藉由資料分析與 AI 工具的結合，能夠更有效率地從歷史資料中發掘有價值的資訊與洞察。\n\n關鍵字：資料分析、人工智慧、資料探索、Titanic Dataset、資料故事、生還率分析\n",
+    "https://drive.google.com/file/d/1v9y-IllZ5n52hRsBiARHoe0097dE6-cR/view?usp=drive_link",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-12T18:22:55.628Z",
+    "(023) 施輝燦",
+    "311349023",
+    "台灣股票投資建議",
+    "https://youtu.be/0buAb4M0Des",
+    "以三個月期間的股市異動來提出以五百萬資金投入股票的建議投資資訊",
+    "https://drive.google.com/drive/folders/1hmMySA70hP2Uccr8OSXCHFXc01Esx5I2?usp=drive_link",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-13T05:33:39.521Z",
+    "(027) 江文靜",
+    "311451027",
+    "高雄資本地圖",
+    "https://youtu.be/SE-U8Iw47xk?si=SoHJA6XHiJGmwzuC",
+    "一、 報告背景與數據範疇二、 核心數據發現與空間集聚現象三、 經濟與社會結構洞察四、 特色村里與趣味數據五、 結論與政策建議",
+    "https://drive.google.com/drive/folders/1A2L9LtkC69Q6mApcDVGB4pZoPOpo36cH?usp=drive_link",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-14T09:59:32.705Z",
+    "(047) 郭安哲",
+    "311251047",
+    "電商信用卡消費成長",
+    "https://youtu.be/YpWOe2WR3Qs",
+    "信用卡消費成長",
+    "https://drive.google.com/file/d/1MxfOh-nFaQTy9CoGd_JMD51xerLUZZgc/view?usp=sharing",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-14T10:31:14.986Z",
+    "(009) 李金翰",
+    "311451009",
+    "薪資驅動與財富驅動的模型比較",
+    "https://youtu.be/HF6q-InhsSo?si=XYkEpnlLudU-YzgU",
+    "中產vs有產階級",
+    "https://drive.google.com/drive/folders/1gWU2dkkKBTWsg2hTA_nf2NJmXIdgWodX?usp=drive_link",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-14T11:08:11.648Z",
+    "(013) 沈祐篁",
+    "311357013",
+    "114年台北市車禍調查",
+    "https://youtu.be/LQWOciqbn10",
+    "個行政區交通事故探討",
+    "https://drive.google.com/drive/folders/1RcBzJksVIknDoGPF08VKgP6ZAEy9EAhg?usp=drive_link",
+    [
+      "I agree."
+    ]
+  ],
+  [
+    "2026-06-14T15:01:55.055Z",
+    "(025) 陳佩雯",
+    "311151025",
+    "台灣所得結構分析",
+    "https://youtu.be/c-rj7g-Vq9I",
+    "探討台灣所得的結構性現象",
+    "https://drive.google.com/drive/folders/1IHacy2Cj9cMjbe1tUiwMp6U8fv7U3UgK?usp=sharing",
+    [
+      "I agree."
+    ]
+  ]
+]
